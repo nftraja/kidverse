@@ -217,6 +217,18 @@ html,body{
   transform:translateX(4px);
 }
 
+/* DRAWER SCROLL FIX */
+.drawer{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* BODY LOCK */
+body.drawer-open{
+  overflow:hidden;
+  height:100%;
+}
+
 /* ===== OVERLAY ===== */
 .overlay{
   position:fixed;
