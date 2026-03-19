@@ -5,16 +5,17 @@
 
 
 /* ===== DRAWER CONTROL ===== */
-function toggleDrawer() {
-  document.getElementById("drawer").classList.add("active");
-  document.getElementById("overlay").classList.add("active");
+function toggleDrawer(){
+  document.getElementById("drawer").classList.toggle("active");
+  document.getElementById("overlay").classList.toggle("active");
+  document.body.classList.toggle("drawer-open");
 }
 
-function closeDrawer() {
+function closeDrawer(){
   document.getElementById("drawer").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("drawer-open");
 }
-
 
 /* ===== GET URL PARAM ===== */
 function getQueryParam(param) {
