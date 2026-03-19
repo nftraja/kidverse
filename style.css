@@ -35,20 +35,20 @@ html,body{
 }
 
 .menu-btn{
-  font-size:20px;
+  font-size:22px;
   cursor:pointer;
   margin-right:12px;
 }
 
 .app-header h2{
-  font-size:18px;
+  font-size:16px;
   font-weight:600;
   color:#d8fff2;
 }
 
 /* ===== CONTAINER ===== */
 .container{
-  padding:70px 14px 80px;
+  padding:70px 8px 70px;
   max-width:1200px;
   margin:auto;
 }
@@ -60,7 +60,7 @@ html,body{
   border:1px solid rgba(0,255,150,0.15);
   padding:18px;
   border-radius:16px;
-  margin-bottom:16px;
+  margin-bottom:10px;
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.7),
@@ -68,7 +68,7 @@ html,body{
 }
 
 .hero-card h1{
-  font-size:20px;
+  font-size:18px;
   margin-bottom:8px;
 }
 
@@ -82,7 +82,7 @@ html,body{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-  gap:12px;
+  gap:8px;
 }
 
 /* ===== CARD ===== */
@@ -92,7 +92,7 @@ html,body{
   border:1px solid rgba(0,255,150,0.15);
 
   padding:14px;
-  border-radius:14px;
+  border-radius:15px;
   position:relative;
 
   box-shadow:
@@ -124,7 +124,7 @@ html,body{
 /* ===== BUTTON (STATIC COLORFUL GRADIENT – PERFORMANCE SAFE) ===== */
 .btn{
   display:inline-block;
-  padding:7px 11px;
+  padding:7px 12px;
   font-size:12px;
   border-radius:8px;
   text-decoration:none;
@@ -162,13 +162,13 @@ html,body{
   left:-260px;
   width:250px;
   height:100%;
-  padding:60px 14px;
+  padding:20px 12px;
 
   background:rgba(0,255,150,0.08);
   backdrop-filter:blur(22px);
 
   border-right:1px solid rgba(0,255,150,0.2);
-  box-shadow:10px 0 40px rgba(0,0,0,0.8);
+  box-shadow:10px 0 30px rgba(0,0,0,0.8);
 
   transition:0.3s ease;
   z-index:1200;
@@ -181,7 +181,7 @@ html,body{
 /* BACK BUTTON */
 .drawer-back{
   font-size:13px;
-  margin-bottom:14px;
+  margin-bottom:10px;
   cursor:pointer;
   color:#9fffdc;
 }
@@ -191,15 +191,15 @@ html,body{
 }
 
 .drawer h3{
-  font-size:14px;
-  margin-bottom:14px;
+  font-size:13px;
+  margin-bottom:10px;
   color:#9bead0;
 }
 
 .drawer a{
   display:block;
-  padding:10px 12px;
-  margin-bottom:8px;
+  padding:8px 10px;
+  margin-bottom:6px;
   font-size:13px;
   border-radius:10px;
   text-decoration:none;
