@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KidVerse – Category</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="app-header">
+  <div class="menu-btn" onclick="toggleDrawer()">☰</div>
+  <h2 id="pageTitle">Category</h2>
+</div>
+
+<!-- DRAWER (INTERNAL ONLY) -->
+<div class="drawer" id="drawer">
+  <h3>Explore</h3>
+
+  <a href="index.html">🏠 Home</a>
+  <a href="category.html?type=early-learning">🧩 Early Learning</a>
+  <a href="category.html?type=school-learning">📘 School Learning</a>
+  <a href="category.html?type=coding-logic">💻 Coding & Logic</a>
+  <a href="category.html?type=creative-zone">🎨 Creative Zone</a>
+  <a href="category.html?type=learning-games">🎮 Learning Games</a>
+  <a href="category.html?type=reading-stories">📖 Reading & Stories</a>
+  <a href="category.html?type=safe-entertainment">📺 Safe Entertainment</a>
+  <a href="category.html?type=sports-physical">⚽ Sports & Physical</a>
+  <a href="category.html?type=skills-development">🧠 Skills Development</a>
+  <a href="category.html?type=competitions-olympiads">🏆 Competitions</a>
+  <a href="category.html?type=parent-tools">👨‍👩‍👧 Parent Tools</a>
+  <a href="category.html?type=teacher-resources">👩‍🏫 Teacher Resources</a>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- CATEGORY TITLE -->
+  <div class="hero-card">
+    <h1 id="categoryTitle">Loading...</h1>
+    <p id="categoryDesc">Curated platforms for this category.</p>
+  </div>
+
+  <!-- CATEGORY GRID (future use / mode switch) -->
+  <div id="categoryContainer" class="grid"></div>
+
+  <!-- PLATFORM GRID -->
+  <div id="platformContainer" class="grid"></div>
+
+</div>
+
+<!-- BOTTOM NAV (EXTERNAL) -->
+<div class="bottom-nav">
+  <a href="https://qbank.nftraja.com/" target="_blank">📘 QBank</a>
+  <a href="https://tool.nftraja.com/" target="_blank">🛠 ToolRaja</a>
+  <a href="https://www.nftraja.com/" target="_blank">🌐 NFTRaja</a>
+  <a href="#">🎮 GameRaja</a>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
