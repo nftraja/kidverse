@@ -17,6 +17,7 @@ function closeDrawer(){
   document.body.classList.remove("drawer-open");
 }
 
+
 /* ===== GET URL PARAM ===== */
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -45,7 +46,6 @@ const categoryMap = {
 async function loadCategoryPage() {
 
   const type = getQueryParam("type");
-
   if (!type) return;
 
   /* Title update */
@@ -58,13 +58,31 @@ async function loadCategoryPage() {
   if (categoryTitle) categoryTitle.innerText = titleText;
 
 
-  /* Fetch JSON */
+  /* Fetch JSON (FIXED) */
   let data = [];
+
   try {
-    const res = await fetch("platforms.json");
+    const res = await fetch("/platforms.json", {
+      cache: "no-store"
+    });
+
     data = await res.json();
+
   } catch (e) {
+
     console.error("JSON load error:", e);
+
+    const container = document.getElementById("platformContainer");
+
+    if(container){
+      container.innerHTML = `
+        <div class="card">
+          <h3>⚠ Failed to load data</h3>
+          <p>Check platforms.json path or network.</p>
+        </div>
+      `;
+    }
+
     return;
   }
 
@@ -79,7 +97,12 @@ async function loadCategoryPage() {
   if (!container) return;
 
   if (filtered.length === 0) {
-    container.innerHTML = "<p>No platforms found.</p>";
+    container.innerHTML = `
+      <div class="card">
+        <h3>No platforms found</h3>
+        <p>This category is empty.</p>
+      </div>
+    `;
     return;
   }
 
@@ -103,7 +126,6 @@ async function loadCategoryPage() {
 /* ===== INIT ===== */
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* Detect category page */
   if (window.location.pathname.includes("category.html")) {
     loadCategoryPage();
   }
